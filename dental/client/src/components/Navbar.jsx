@@ -38,7 +38,7 @@ const Navbar = () => {
       >
         <div className="container mx-auto px-6 md:px-12 flex items-center justify-between">
           <div className="z-50 relative flex items-center group cursor-pointer">
-            <img src={logo} alt="Dr. Dhwani's Dental Clinic" className={`h-12 md:h-16 object-contain transition-all duration-500 group-hover:scale-105 ${isTransparentAndDark ? 'brightness-0 invert' : ''}`} onError={(e) => { e.target.style.display = 'none'; e.target.nextSibling.style.display = 'block'; }} />
+            <img src={logo} alt="Dr. Dhwani's Dental Clinic" className="h-12 md:h-16 object-contain transition-all duration-500" onError={(e) => { e.target.style.display = 'none'; e.target.nextSibling.style.display = 'block'; }} />
             <div className={`text-2xl md:text-3xl font-heading font-bold tracking-tight hidden ${isTransparentAndDark ? 'text-secondary' : 'text-primary'}`}>
               DR. DHWANI'S
             </div>
