@@ -87,35 +87,29 @@ const Gallery = () => {
         </div>
       </div>
 
-      {/* Draggable Carousel */}
-      <motion.div 
-        ref={carouselRef} 
-        className="cursor-grab active:cursor-grabbing overflow-hidden pl-6 md:pl-12"
-      >
+      {/* Infinite Auto-Scrolling Carousel */}
+      <div className="overflow-hidden pl-6 md:pl-12 py-4">
         <motion.div 
-          drag="x" 
-          dragConstraints={{ right: 0, left: -width }} 
-          className="flex space-x-6 w-max"
-          initial={{ x: 100, opacity: 0 }}
-          animate={{ x: 0, opacity: 1 }}
-          transition={{ duration: 1, ease: [0.76, 0, 0.24, 1] }}
+          className="flex w-max"
+          animate={{ x: ["0%", "-50%"] }}
+          transition={{ repeat: Infinity, ease: "linear", duration: 40 }}
         >
-          {images.map((img, index) => (
-            <motion.div 
+          {[...images, ...images].map((img, index) => (
+            <div 
               key={index} 
-              className="w-[300px] h-[400px] md:w-[450px] md:h-[600px] relative overflow-hidden group rounded-sm"
+              className="w-[300px] h-[400px] md:w-[450px] md:h-[600px] relative overflow-hidden group rounded-sm shrink-0 mr-6"
             >
               <img 
                 src={img} 
                 alt={`Gallery image ${index + 1}`} 
-                className="w-full h-full object-cover pointer-events-none transition-transform duration-700 group-hover:scale-105" 
+                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" 
                 onError={(e) => e.target.style.display = 'none'} 
               />
               <div className="absolute inset-0 bg-primary/20 group-hover:bg-transparent transition-colors duration-500 pointer-events-none" />
-            </motion.div>
+            </div>
           ))}
         </motion.div>
-      </motion.div>
+      </div>
 
       <Footer />
     </div>
