@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import { Star, Award, Shield, Users, Quote } from 'lucide-react';
 import doctorImg from '../assets/Doctor.png';
+import Footer from '../components/Footer';
 
 const About = () => {
   return (
@@ -237,6 +238,7 @@ const About = () => {
         </div>
       </section>
 
+      <Footer />
     </div>
   );
 };

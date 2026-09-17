@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import Footer from '../components/Footer';
 
 const Services = () => {
   return (
@@ -20,6 +21,7 @@ const Services = () => {
           <p>A comprehensive list of dental treatments and services will be placed here soon.</p>
         </motion.div>
       </div>
+      <Footer />
     </div>
   );
 };

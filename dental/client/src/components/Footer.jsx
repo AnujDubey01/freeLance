@@ -1,5 +1,4 @@
 import { motion } from 'framer-motion';
-import { ArrowUp } from 'lucide-react';
 
 const Footer = () => {
   const scrollToTop = () => {
@@ -7,29 +6,9 @@ const Footer = () => {
   };
 
   return (
-    <footer className="bg-primary text-secondary pt-32 pb-8 border-t border-secondary/10">
+    <footer className="bg-primary text-secondary pt-16 pb-8 border-t border-secondary/10">
       <div className="container mx-auto px-6 md:px-12">
         
-        <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-32 space-y-12 md:space-y-0">
-          <motion.h2 
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-5xl md:text-8xl lg:text-[9rem] font-heading font-bold uppercase leading-[0.8] tracking-tighter"
-          >
-            Your Next <br />
-            Smile Starts <br />
-            <span className="text-accent italic font-light">Here.</span>
-          </motion.h2>
-          
-          <button 
-            onClick={scrollToTop}
-            className="w-16 h-16 rounded-full border border-secondary/30 flex items-center justify-center hover:bg-secondary hover:text-primary transition-colors duration-300"
-          >
-            <ArrowUp size={24} />
-          </button>
-        </div>
-
         <div className="grid grid-cols-2 md:grid-cols-4 gap-12 border-t border-secondary/20 pt-16 mb-16">
           <div className="col-span-2 md:col-span-1">
             <h3 className="font-heading font-bold text-xl mb-6">DR. DHWANI'S</h3>

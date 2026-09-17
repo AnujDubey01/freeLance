@@ -13,6 +13,7 @@ import g8 from '../assets/g7.jpg';
 import g9 from '../assets/g8.jpg';
 import mainClinic from '../assets/high_end_bright_modern_aesthetic_dental_clinic_interior_for_a_website_landing.png';
 import clinic2 from '../assets/clinic2.png';
+import Footer from '../components/Footer';
 
 const images = [mainClinic, clinic2, g1, g2, g3, g4, g5, g6, g7, g8, g9];
 const heroImages = [mainClinic, clinic2, g1, g2];
@@ -116,6 +117,7 @@ const Gallery = () => {
         </motion.div>
       </motion.div>
 
+      <Footer />
     </div>
   );
 };
