@@ -5,9 +5,9 @@ const Location = () => {
     <section className="py-32 bg-secondary text-primary">
       <div className="container mx-auto px-6 md:px-12">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-          
+
           <div className="flex flex-col space-y-12">
-            <motion.h2 
+            <motion.h2
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-100px" }}
@@ -59,16 +59,19 @@ const Location = () => {
                 </p>
               </motion.div>
             </div>
-            
-            <motion.button 
+
+            <motion.a
+              href="https://www.google.com/maps/dir/?api=1&destination=Dr.+Dhwani's+Dental+Clinic,+Vadodara"
+              target="_blank"
+              rel="noopener noreferrer"
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
               transition={{ delay: 0.5 }}
-              className="w-max text-accent font-bold uppercase tracking-wider text-sm border-b border-accent pb-1 hover:text-primary transition-colors"
+              className="w-max inline-block text-accent font-bold uppercase tracking-wider text-sm border-b border-accent pb-1 hover:text-primary transition-colors"
             >
               Get Directions →
-            </motion.button>
+            </motion.a>
           </div>
 
           <motion.div
@@ -76,20 +79,21 @@ const Location = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.8 }}
-            className="bg-slate-800 h-[400px] md:h-auto relative overflow-hidden"
+            className="bg-slate-800 w-full h-[400px] md:h-[600px] rounded-lg relative overflow-hidden shadow-xl"
           >
-            <iframe 
-              src="https://www.google.com/maps?q=Dr.+Dhwani’s+Dental+Clinic,Gotri,Vadodara,Gujarat&output=embed" 
-              width="100%" 
-              height="100%" 
-              style={{ border: 0 }} 
-              allowFullScreen="" 
-              loading="lazy" 
+            <iframe
+              src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=Dr.%20Dhwani's%20Dental%20Clinic,%20Gotri,%20Vadodara+(Dr.%20Dhwani's%20Dental%20Clinic)&amp;t=&amp;z=15&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
+              width="100%"
+              height="100%"
+              style={{ border: 0 }}
+              allowFullScreen=""
+              loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
               className="absolute inset-0 w-full h-full grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all duration-700"
             ></iframe>
+
           </motion.div>
-          
+
         </div>
       </div>
     </section>

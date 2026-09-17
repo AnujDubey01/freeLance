@@ -37,9 +37,14 @@ const Reviews = () => {
             Based on 279 Google Reviews
           </p>
 
-          <button className="mt-8 border border-secondary/30 hover:border-accent text-secondary hover:text-accent px-8 py-4 uppercase tracking-wider text-sm transition-colors duration-300">
+          <a 
+            href="https://www.google.com/maps/place/Dr.+Dhwani%E2%80%99s+Dental+Clinic/@22.3110273,73.1389413,15z"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block mt-8 border border-secondary/30 hover:border-accent text-secondary hover:text-accent px-8 py-4 uppercase tracking-wider text-sm transition-colors duration-300"
+          >
             View Google Reviews →
-          </button>
+          </a>
         </motion.div>
 
       </div>

@@ -1,21 +1,28 @@
 import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import precisionImg from '../assets/precision.jpg';
 
 const FeaturedService = () => {
   return (
     <section className="py-32 bg-secondary text-primary">
       <div className="container mx-auto px-6 md:px-12 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
         
-        <div className="order-2 lg:order-1">
+        <div className="order-2 lg:order-1 relative">
           <motion.div 
             initial={{ opacity: 0, scale: 0.95 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 1, ease: [0.76, 0, 0.24, 1] }}
-            className="aspect-[4/5] w-full bg-slate-800"
+            className="aspect-[4/5] w-full bg-slate-800 relative overflow-hidden shadow-2xl rounded-sm"
           >
-            {/* Placeholder for modern dental procedure image */}
+            <img 
+              src={precisionImg} 
+              alt="Advanced Digital Dentistry" 
+              className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
+            />
           </motion.div>
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-accent/5 rounded-full blur-3xl -z-10"></div>
         </div>
 
         <div className="order-1 lg:order-2 flex flex-col justify-center space-y-8">
@@ -47,10 +54,13 @@ const FeaturedService = () => {
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.8, delay: 0.4 }}
           >
-            <button className="flex items-center space-x-2 text-accent uppercase tracking-wider text-sm font-bold hover:text-primary transition-colors duration-300 border-b border-accent pb-1">
+            <Link 
+              to="/services" 
+              className="inline-flex items-center space-x-2 text-accent uppercase tracking-wider text-sm font-bold hover:text-primary transition-colors duration-300 border-b border-accent pb-1 w-fit"
+            >
               <span>Explore Treatment</span>
               <ArrowRight size={16} />
-            </button>
+            </Link>
           </motion.div>
         </div>
 
