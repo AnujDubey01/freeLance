@@ -1,0 +1,35 @@
+@import "tailwindcss";
+
+@theme {
+  --color-gym-red: #E50914;
+  --color-gym-black: #080808;
+  --color-gym-charcoal: #111111;
+  --color-gym-graphite: #1a1a1a;
+  
+  --font-heading: 'Anton', sans-serif;
+  --font-body: 'Inter', sans-serif;
+}
+
+@layer base {
+  body {
+    @apply bg-gym-black text-white font-body overflow-x-hidden;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading uppercase tracking-wide;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #080808;
+}
+::-webkit-scrollbar-thumb {
+  background: #1a1a1a;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #E50914;
+}
